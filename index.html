@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seznamy a tabulky</title>
+</head>
+<body>
+    <header>
+        <h1>Seznamy a tabulky</h1>
+    </header>
+    <main>
+        <section id="seznamy">
+            <h2>Tvorba seznamů</h2>
+            <h3>Uspořádaný seznam(Ordered List)</h3>
+            <ol>
+                <li>Google Chrome</li>
+                <li>Internet Explorer</li>
+                <li>Mozilla Firefox</li>
+            </ol>
+            <h3>Neuspořádaný seznam(Ordered List)</h3>
+            <ul>
+                <li>IP adressy(např Ipv4: 192.168.23.1, IPv6: ) </li>
+                <li>DNS adressy(např. strojka.opava.cz)</li>
+                <li>URL adressy(např. http://moodle.sspu-opava.cz.81/course/view.php?id=95)</li>
+            </ul>
+            <h3>Vnořený seznam</h3>
+            <ul>
+                <li>
+                    <p>Hardware</p>
+                    <ol type="I">
+                        <li>
+                            <p>Základní jednotka</p>
+                            <ol type="a">
+                                <li>
+                                    <p>procesor(CPU)</p>
+                                </li>
+                                <li>
+                                    <p>paměť(RAM)</p>
+                                </li>
+                                <li>
+                                    <p>pevný disk(HDD)</p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>Vstupní zařízení</p>
+                            <ol type="a">
+                                <li>
+                                    <p>klávesnice</p>
+                                </li>
+                                <li>
+                                    <p>myš</p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>Výstupní zařízení</p>
+                            <ol type="a">
+                                <li>
+                                    <p>monitor</p>
+                                </li>
+                                <li>
+                                    <p>tiskárna</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <li>
+                        <p>Software</p>
+                        <ol type="I">
+                            <li>
+                                <p>Základní programové vybavení</p>
+                                <ol type="a">
+                                    <li>
+                                        <p>operační systém</p>
+                                    </li>
+                                    <li>
+                                        <p>ovladače</p>
+                                    </li>
+                                    <li>
+                                        <p>firmware</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Aplikace</p>
+                                <ol type="a">
+                                    <li>
+                                        <p>textový editor</p>
+                                    </li>
+                                    <li>
+                                        <p>prohlížeč</p>
+                                    </li>
+                                    <li>
+                                        <p>antivyrový program</p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                </li>
+            </ul>
+            <h3>POPISNÝ SEZNAM</h3>
+            <dl>
+                <dt><b>Interent Society(ISOC)</b></dt>
+                <dd>Mezinárodní organizace pro globální koordinaci a kooperaci v rámci internetu.</dd>
+                <dt><b>World Wide Web Consorcium(W3C)</b></dt>
+                <dd>Mezinárodní konsorcium, jehož členové společně s veřejností veřejně vyvíjejí webové standardy pro WWWW.</dd>
+                <dt><b>Interenet Assigned Numbers Authority(IANA)</b></dt>
+                <dd>Organizace, která dohlíží celosvětově na přidělování IP adres, správu kořenových souborů DNS, definování typů médií pro MIME, a další náležitosti internetových protokolů</dd>
+            </dl>
+        </section>
+        <section id="tabulky">
+            <h2>Tvorba tabulek</h2>
+            <p>Komplexní tabulka v HTML může být tvořena záhlavím, tělem a zápatím. Pomocí atributů <b>colspan</b> a <b>rowspan</b> můžeme vytvořit sloučené buňky, které přesahují přes více sloupců i řádků.</p>
+            <table>
+                <caption>Studijní obory na SŠPU Opava - školní rok 2024/2025</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Název oboru</th>
+                        <th rowspan="2">Kód oboru</th>
+                        <th rowspan="2">Počet tříd</th>
+                        <th colspan="3">Počty žáků</th>
+                    </tr>
+                    <tr>
+                        <th>Chlapci</th>
+                        <th>Dívky</th>
+                        <th>Celkem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Informační technologie</td>
+                        <td>18-20-M/01</td>
+                        <td>4</td>
+                        <td>104</td>
+                        <td>1</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>Strojírenství</td>
+                        <td>23-41-M/01</td>
+                        <td>5</td>
+                        <td>135</td>
+                        <td>1</td>
+                        <td>136</td>
+                    </tr>
+                    <tr>
+                        <td>Umělecké obory</td>
+                        <td>82-41-M/04, 82-41-M/05, 82-41-M/08</td>
+                        <td>4</td>
+                        <td>20</td>
+                        <td>74</td>
+                        <td>94</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Celkové údaje</td>
+                        <td id="red">13 tříd</td>
+                        <td colspan="3" id="red">335 žáků</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 <b>Matyáš Velecký</b>, <mark>IT1</mark></p>
+    </footer>
+</body>
+</html>
